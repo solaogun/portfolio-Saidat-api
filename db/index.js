@@ -1,10 +1,12 @@
 
 
-const config = require('../config/dev')
+const config = require('../config')
 
 const mongoose = require('mongoose');
 
-const model = require('./models/portfolio')
+require('./models/portfolio')
+require('./models/blog')
+
 
 exports.connect = () => {
     return mongoose.connect(config.DB_URI, {
